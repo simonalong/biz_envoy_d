@@ -1,0 +1,29 @@
+api-module: d
+
+base:
+  api:
+    prefix: api
+  server:
+    # 是否启用，默认：true
+    enable: true
+    # 端口号
+    port: 18013
+    # web框架gin的配置
+    gin:
+      # 有三种模式：debug/release/test，填错则使用release
+      mode: debug
+  redis:
+    enable: true
+    standalone:
+      addr: localhost:16379
+
+biz:
+  url:
+    e: http://localhost:18014
+
+biz_f:
+  database:
+    username: root
+    password: '123456'
+    host: localhost
+    port: 13306

@@ -1,0 +1,37 @@
+api-module: d
+
+base:
+  api:
+    prefix: api
+  server:
+    # 是否启用，默认：true
+    enable: true
+    # 端口号
+    port: 18003
+    # web框架gin的配置
+    gin:
+      # 有三种模式：debug/release/test，填错则使用release
+      mode: release
+    response:
+      print:
+        # 是否打印：true, false；默认 false
+        enable: true
+  redis:
+    enable: true
+    standalone:
+      addr: redis-service:6379
+  endpoint:
+    # 配置的管理（查看和变更），默认关闭，true/false
+    config:
+      enable: true
+biz:
+  url:
+    e: http://localhost:18004
+#    e: http://biz-e-service:18004
+
+biz_f:
+  database:
+    username: root
+    password: '123456'
+    host: mysql-service
+    port: 3306
